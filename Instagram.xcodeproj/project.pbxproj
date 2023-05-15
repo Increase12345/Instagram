@@ -37,6 +37,11 @@
 		40623EAF2A11D71D00212C21 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40623EAE2A11D71D00212C21 /* FirebaseFirestoreSwift */; };
 		40623EB12A11D71D00212C21 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 40623EB02A11D71D00212C21 /* FirebaseStorage */; };
 		40623EB52A11D87000212C21 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EB42A11D87000212C21 /* AuthService.swift */; };
+		40623EB92A11D9EB00212C21 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EB82A11D9EB00212C21 /* ContentViewModel.swift */; };
+		40623EBC2A11DCAE00212C21 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EBB2A11DCAE00212C21 /* RegistrationViewModel.swift */; };
+		40623EBE2A12CFE200212C21 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EBD2A12CFE200212C21 /* LoginViewModel.swift */; };
+		40623EC02A12DE0600212C21 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EBF2A12DE0600212C21 /* UserService.swift */; };
+		40623EC42A12DEFC00212C21 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EC32A12DEFC00212C21 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +72,11 @@
 		40623EA52A11A8BE00212C21 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		40623EA72A11D68F00212C21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40623EB42A11D87000212C21 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		40623EB82A11D9EB00212C21 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		40623EBB2A11DCAE00212C21 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		40623EBD2A12CFE200212C21 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		40623EBF2A12DE0600212C21 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		40623EC32A12DEFC00212C21 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +118,6 @@
 				40623E742A0EC70800212C21 /* Extensions */,
 				40623E732A0EC70500212C21 /* Model */,
 				40623E722A0EC6FB00212C21 /* Services */,
-				40623E662A0EC6EA00212C21 /* ContentView.swift */,
 				40623EA72A11D68F00212C21 /* GoogleService-Info.plist */,
 				40623E682A0EC6EB00212C21 /* Assets.xcassets */,
 				40623E6A2A0EC6EB00212C21 /* Preview Content */,
@@ -127,6 +136,7 @@
 		40623E722A0EC6FB00212C21 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				40623EBF2A12DE0600212C21 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -173,8 +183,9 @@
 		40623E772A0EC74400212C21 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				40623EB32A11D85900212C21 /* Service */,
 				40623EB22A11D84800212C21 /* View */,
+				40623EBA2A11DC7B00212C21 /* ViewModel */,
+				40623EB32A11D85900212C21 /* Service */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -201,6 +212,8 @@
 		40623E7A2A0EC76800212C21 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				40623EB72A11D9DA00212C21 /* ViewModel */,
+				40623EB62A11D9D300212C21 /* View */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -208,7 +221,8 @@
 		40623E7B2A0EC76F00212C21 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				40623E892A101D6200212C21 /* SearchView.swift */,
+				40623EC12A12DEDA00212C21 /* View */,
+				40623EC22A12DEE000212C21 /* ViewModel */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -259,6 +273,47 @@
 				40623EB42A11D87000212C21 /* AuthService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		40623EB62A11D9D300212C21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40623E662A0EC6EA00212C21 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40623EB72A11D9DA00212C21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40623EB82A11D9EB00212C21 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		40623EBA2A11DC7B00212C21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40623EBB2A11DCAE00212C21 /* RegistrationViewModel.swift */,
+				40623EBD2A12CFE200212C21 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		40623EC12A12DEDA00212C21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40623E892A101D6200212C21 /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40623EC22A12DEE000212C21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40623EC32A12DEFC00212C21 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,12 +398,15 @@
 			files = (
 				40623E882A0F051C00212C21 /* FeedCell.swift in Sources */,
 				40623EB52A11D87000212C21 /* AuthService.swift in Sources */,
+				40623EC02A12DE0600212C21 /* UserService.swift in Sources */,
 				40623E962A10766E00212C21 /* CreatePasswordView.swift in Sources */,
 				40623E812A0EFC5200212C21 /* ProfileView.swift in Sources */,
 				40623E922A10726700212C21 /* CreateUserNameView.swift in Sources */,
 				40623E9A2A107A6800212C21 /* User.swift in Sources */,
 				40623E672A0EC6EA00212C21 /* ContentView.swift in Sources */,
 				40623E8C2A101F7F00212C21 /* LoginView.swift in Sources */,
+				40623EBE2A12CFE200212C21 /* LoginViewModel.swift in Sources */,
+				40623EB92A11D9EB00212C21 /* ContentViewModel.swift in Sources */,
 				40623EA22A11A55E00212C21 /* ProfileHeaderView.swift in Sources */,
 				40623E652A0EC6EA00212C21 /* InstagramApp.swift in Sources */,
 				40623E8E2A10409800212C21 /* AddEmailView.swift in Sources */,
@@ -360,6 +418,8 @@
 				40623E9C2A11989300212C21 /* CurrentUserProfile.swift in Sources */,
 				40623E842A0F00C000212C21 /* UserStatView.swift in Sources */,
 				40623EA42A11A64100212C21 /* UploadPostView.swift in Sources */,
+				40623EC42A12DEFC00212C21 /* SearchViewModel.swift in Sources */,
+				40623EBC2A11DCAE00212C21 /* RegistrationViewModel.swift in Sources */,
 				40623E862A0F050F00212C21 /* FeedView.swift in Sources */,
 				40623E9E2A119AB000212C21 /* Post.swift in Sources */,
 				40623E7F2A0ECA7C00212C21 /* MainTabView.swift in Sources */,
