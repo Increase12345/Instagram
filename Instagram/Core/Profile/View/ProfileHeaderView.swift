@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileHeaderView: View {
     let user: User
+    @State private var showEditProfile = false
     
     var body: some View {
         VStack(spacing: 10) {
@@ -41,28 +42,35 @@ struct ProfileHeaderView: View {
                     Text(bio)
                         .font(.footnote)
                 }
-                
-                Text(user.username)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal)
             
             // action button
             Button {
-                
+                if user.isCurrentUser {
+                    showEditProfile.toggle()
+                } else {
+                    
+                }
             } label: {
-                Text("Edit Profile")
+                Text(user.isCurrentUser ? "Edit Profile": "Follow")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .frame(width: 360, height: 32)
-                    .foregroundColor(.black)
+                    .background(user.isCurrentUser ? .white: Color(.systemBlue))
+                    .foregroundColor(user.isCurrentUser ? .black: .white)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
-                            .stroke(.gray)
+                            .stroke(user.isCurrentUser ? .gray: .clear)
                     )
+                    .cornerRadius(6)
             }
             
             Divider()
+        }
+        .fullScreenCover(isPresented: $showEditProfile) {
+            Text("Edit profile view")
         }
     }
 }

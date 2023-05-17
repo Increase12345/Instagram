@@ -42,6 +42,8 @@
 		40623EBE2A12CFE200212C21 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EBD2A12CFE200212C21 /* LoginViewModel.swift */; };
 		40623EC02A12DE0600212C21 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EBF2A12DE0600212C21 /* UserService.swift */; };
 		40623EC42A12DEFC00212C21 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EC32A12DEFC00212C21 /* SearchViewModel.swift */; };
+		40623EC62A12EF4300212C21 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EC52A12EF4300212C21 /* EditProfileView.swift */; };
+		40623ECA2A12F7FE00212C21 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623EC92A12F7FE00212C21 /* EditProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		40623EBD2A12CFE200212C21 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		40623EBF2A12DE0600212C21 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		40623EC32A12DEFC00212C21 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		40623EC52A12EF4300212C21 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		40623EC92A12F7FE00212C21 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,9 +206,8 @@
 		40623E792A0EC76300212C21 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				40623E802A0EFC5200212C21 /* ProfileView.swift */,
-				40623EA12A11A55E00212C21 /* ProfileHeaderView.swift */,
-				40623E9B2A11989300212C21 /* CurrentUserProfile.swift */,
+				40623EC72A12F7CE00212C21 /* View */,
+				40623EC82A12F7DB00212C21 /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -316,6 +319,25 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		40623EC72A12F7CE00212C21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40623E802A0EFC5200212C21 /* ProfileView.swift */,
+				40623EA12A11A55E00212C21 /* ProfileHeaderView.swift */,
+				40623E9B2A11989300212C21 /* CurrentUserProfile.swift */,
+				40623EC52A12EF4300212C21 /* EditProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40623EC82A12F7DB00212C21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40623EC92A12F7FE00212C21 /* EditProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -408,8 +430,10 @@
 				40623EBE2A12CFE200212C21 /* LoginViewModel.swift in Sources */,
 				40623EB92A11D9EB00212C21 /* ContentViewModel.swift in Sources */,
 				40623EA22A11A55E00212C21 /* ProfileHeaderView.swift in Sources */,
+				40623ECA2A12F7FE00212C21 /* EditProfileViewModel.swift in Sources */,
 				40623E652A0EC6EA00212C21 /* InstagramApp.swift in Sources */,
 				40623E8E2A10409800212C21 /* AddEmailView.swift in Sources */,
+				40623EC62A12EF4300212C21 /* EditProfileView.swift in Sources */,
 				40623E8A2A101D6200212C21 /* SearchView.swift in Sources */,
 				40623E902A1070B300212C21 /* IGTextFieldModifier.swift in Sources */,
 				40623E982A1077A200212C21 /* CompleteSignUpView.swift in Sources */,
