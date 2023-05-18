@@ -10,7 +10,11 @@ import PhotosUI
 
 struct EditProfileView: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject var vm = EditProfileViewModel()
+    @StateObject var vm: EditProfileViewModel
+    
+    init(user: User) {
+        self._vm = StateObject(wrappedValue: EditProfileViewModel(user: user))
+    }
     
     var body: some View {
         VStack {
@@ -29,7 +33,10 @@ struct EditProfileView: View {
                     Spacer()
                     
                     Button {
-                        
+                        Task {
+                            try await vm.updateUserData()
+                            dismiss()
+                        }
                     } label: {
                         Text("Done")
                             .font(.subheadline.bold())
@@ -51,12 +58,7 @@ struct EditProfileView: View {
                             .background(.gray)
                             .clipShape(Circle())
                     } else {
-                        Image(systemName: "person")
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .foregroundColor(.white)
-                            .background(.gray)
-                            .clipShape(Circle())
+                        CircularProfileImageView(user: vm.user, size: .large)
                     }
                     Text("Edit profile picture")
                         .font(.footnote)
@@ -101,6 +103,6 @@ struct EditProfileRowView: View {
 
 struct EditProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileView()
+        EditProfileView(user: User.MOCK_USERS[0])
     }
 }
