@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import Firebase
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct InstagramApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
