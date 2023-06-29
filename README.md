@@ -1,5 +1,5 @@
 <h1 align="center">Instagram Clone</h1>
-<h3 align="center">Using Firebase services and MVVM</h3>
+<h3 align="center">Using Firebase services and MVVM. Features: Login / Sign Up, Image Uploading / Downloading, Post Feed, User Profile, User Search, Edit Profile, Firebase backend</h3>
 
 <p align="center">
   <img src="https://github.com/Increase12345/Instagram/assets/98255061/8c4d5edb-dad8-4003-9cbb-4e35753b20c1" width="200" />
